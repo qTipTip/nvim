@@ -29,5 +29,3 @@ vim.opt.termguicolors = true
 
 vim.opt.pumheight = 5
 vim.opt.pumblend = 5
-
-vim.opt.autochdir = true
