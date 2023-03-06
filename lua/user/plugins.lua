@@ -13,12 +13,12 @@ require("lazy").setup({
         branch = 'v1.x',
         dependencies = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' }, -- Required
-            { 'williamboman/mason.nvim' }, -- Optional
+            { 'neovim/nvim-lspconfig' },             -- Required
+            { 'williamboman/mason.nvim' },           -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
             -- { 'hrsh7th/cmp-buffer' }, -- Optional
             -- { 'hrsh7th/cmp-path' }, -- Optional
@@ -26,8 +26,8 @@ require("lazy").setup({
             -- { 'hrsh7th/cmp-nvim-lua' }, -- Optional
 
             -- Snippets
-            { 'L3MON4D3/LuaSnip' }, -- Required
-            -- { 'rafamadriz/friendly-snippets' }, -- Optional
+            { 'L3MON4D3/LuaSnip' },             -- Required
+            { 'rafamadriz/friendly-snippets' }, -- Optional
         }
     },
     "windwp/nvim-autopairs",

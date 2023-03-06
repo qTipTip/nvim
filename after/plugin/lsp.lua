@@ -2,7 +2,7 @@ require('neodev').setup({})
 local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
-lsp.ensure_installed({ 'pylsp', 'sumneko_lua' })
+lsp.ensure_installed({ 'pylsp', 'lua_ls' })
 
 
 lsp.configure('pylsp',
@@ -19,7 +19,7 @@ lsp.configure('pylsp',
     }
 )
 
-lsp.on_attach(function(client, buffer_number)
+lsp.on_attach(function(_, buffer_number)
     local opts = { buffer = buffer_number, remap = false }
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -37,7 +37,11 @@ lsp.on_attach(function(client, buffer_number)
     vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n", "<leader>rf", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
-    vim.keymap.set("i", "<c-p>", function() vim.lsp.buf.signature_help() end, opts)
+    -- vim.keymap.set("i", "<c-p>", function() vim.lsp.buf.signature_help() end, opts)
+    vim.keymap.set("n", "<leader>af", function()
+        vim.lsp.buf.format { sync = true }
+        vim.cmd.w()
+    end, opts)
 end)
 
 lsp.setup()

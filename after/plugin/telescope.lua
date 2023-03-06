@@ -16,5 +16,10 @@ require("telescope").setup({
                 telescope = require('telescope.themes').get_dropdown({})
             }
         }
+    },
+    pickers = {
+        find_files = {
+            follow = true
+        }
     }
 })
