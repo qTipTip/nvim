@@ -1,4 +1,5 @@
-require("telescope").load_extension("lsp_handlers")
+telescope = require('telescope')
+telescope.load_extension("lsp_handlers")
 
 local builtin = require('telescope.builtin')
 

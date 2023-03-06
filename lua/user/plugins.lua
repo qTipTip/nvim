@@ -1,4 +1,5 @@
 require("lazy").setup({
+    "gnikdroy/projections.nvim",
     "glepnir/dashboard-nvim",
     "RRethy/vim-illuminate",
     "feline-nvim/feline.nvim",
