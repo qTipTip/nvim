@@ -1,6 +1,4 @@
-require("lazy").setup({
-    "gnikdroy/projections.nvim",
-    "glepnir/dashboard-nvim",
+require("lazy").setup({ "gnikdroy/projections.nvim",
     "RRethy/vim-illuminate",
     "feline-nvim/feline.nvim",
     "folke/neodev.nvim",
@@ -16,6 +14,8 @@ require("lazy").setup({
     'gbrlsnchs/telescope-lsp-handlers.nvim',
     'lewis6991/gitsigns.nvim',
     'mfussenegger/nvim-dap',
+    'ggandor/leap.nvim',
+    {'AckslD/swenv.nvim', dependencies = "stevearc/dressing.nvim"},
     { "catppuccin/nvim",               name = "catppuccin" },
     { 'mfussenegger/nvim-dap-python',  dependencies = 'mfussenegger/nvim-dap' },
     { 'nvim-telescope/telescope.nvim', branch = "0.1.x",                      dependencies = { "nvim-lua/plenary.nvim" } },

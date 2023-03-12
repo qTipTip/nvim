@@ -39,8 +39,12 @@ lsp.on_attach(function(_, buffer_number)
     vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
     -- vim.keymap.set("i", "<c-p>", function() vim.lsp.buf.signature_help() end, opts)
     vim.keymap.set("n", "<leader>af", function()
-        vim.lsp.buf.format { sync = true }
-        vim.cmd.w()
+        if vim.fn.executable("black") and vim.bo.filetype == "python" then
+            vim.fn.system("black", "%")
+        else
+            vim.lsp.buf.format { sync = true }
+        end
+        -- vim.cmd.w()
     end, opts)
 end)
 
